@@ -23,7 +23,7 @@ export class Post extends Component {
         ) : (
           <div>
             <Row>
-              <Col xs="4" sm="4">
+              <Col xs="6" sm="6">
                 <Card>
                   <CardHeader tag="h3">{data.name}</CardHeader>
                   <CardImg
@@ -33,7 +33,7 @@ export class Post extends Component {
                   />
                   <CardBody>
                     <CardSubtitle></CardSubtitle>
-                    <CardText>Height: {data.height} cm</CardText>
+                    <CardText>Height: {data.height}0 cm</CardText>
                     <Button>
                       <Link
                         className="links"

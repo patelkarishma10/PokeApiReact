@@ -11,28 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.navBar {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333333;
-  align-content: center;
-  text-align: center;
+
+.links {
+  color: rgb(207, 204, 204);
 }
 
-li {
-  float: right;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 16px;
+.links:hover {
+  color: rgb(255, 255, 255);
   text-decoration: none;
-}
-
-li a:hover {
-  background-color: #111111;
 }

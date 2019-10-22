@@ -1,15 +1,31 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from "reactstrap";
 
-export class NavBar extends Component {
-render() {
-        return (
-          <div>
-              <ul className="navBar">
-                <li id="Search"><Link to="/Search">Search</Link></li>
-                <li id="Home" ><Link to="/">Home</Link></li>
-              </ul>
-          </div>
-        )
-      }
-}
+export const NavBar = props => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
+
+  return (
+    <div>
+      <Navbar color="dark" dark>
+        <Link className="links" to="/">
+          Home
+        </Link>
+        <NavbarToggler onClick={toggle} />
+        <Collapse isOpen={isOpen} navbar>
+          <Nav navbar>
+            <NavItem>
+              <Link className="links" to="/Search">
+                Search
+              </Link>
+            </NavItem>
+          </Nav>
+        </Collapse>
+      </Navbar>
+    </div>
+  );
+};
+
+export default NavBar;
